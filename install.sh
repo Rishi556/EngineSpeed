@@ -62,6 +62,7 @@ sudo apt install ufw -y
 sudo apt install dnsutils -y
 sudo apt install mongodb-org -y
 sudo apt install build-essential -y
+sudo apt install ufw -y
 sudo npm i -g pm2
 
 ################
@@ -105,6 +106,14 @@ then
   echo "ACTIVE_SIGNING_KEY=$privActiveKey" >> .env
   echo "ACCOUNT=$accountName" >> .env
   echo "IP=$pubIP" >> .env
+  
+  #######################
+  ## Allow Port Access ##
+  #######################
+  ufw allow ssh
+  ufw allow 5000
+  ufw allow 5001
+  ufw enable
 fi
 ######################
 ## End Witness Only ##
