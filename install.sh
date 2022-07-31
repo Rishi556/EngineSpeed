@@ -11,7 +11,7 @@ gitURL="https://github.com/primersion/steemsmartcontracts.git"
 gitBranch="hive-engine-restore"
 fullnode=1
 ipv6=1
-while getopts n:wla:p:4s: flag
+while getopts wla:p:4s: flag
 do
     case "${flag}" in
         w)
