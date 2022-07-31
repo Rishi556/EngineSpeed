@@ -7,7 +7,7 @@ This also does use Node.JS 16 and Mongo 5, which isn't recommended by the offici
  Usage: 
  ```
  wget https://raw.githubusercontent.com/Rishi556/EngineSpeed/main/install.sh
- chomd +x install.sh
+ chmod +x install.sh
  ./install.sh
  ```
  
