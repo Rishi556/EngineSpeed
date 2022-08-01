@@ -105,7 +105,7 @@ then
   ####################
   echo "ACTIVE_SIGNING_KEY=$privActiveKey" >> .env
   echo "ACCOUNT=$accountName" >> .env
-  echo "IP=$pubIP" >> .env
+  echo "NODE_IP=$pubIP" >> .env
   
   #######################
   ## Allow Port Access ##
