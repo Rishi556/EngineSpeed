@@ -2,11 +2,11 @@
 
 Setup Hive-Engine Super Quick. This is meant for setting up a hive-engine node super quick as long as you know what its doing. It uses the default configuration and is just there to get you setup while you do something else. If you don't understand much about it, don't use it.
  
-This also does use Node.JS 16 and Mongo 5, which isn't recommended by the official docs. I do run both of those on most of my nodes though and they have worked well for me so it's what I set this script to use(it's mainly for my own use). For the time being, the usage instructions will point to gitlab(as well as cloning the repo once a PR from primersion's copy to the main repo is made) due to Github not supporting IPv6 and only supporting Gitlab supports both. 
+This also does use Node.JS 16 and Mongo 5, which isn't recommended by the official docs. I do run both of those on most of my nodes though and they have worked well for me so it's what I set this script to use(it's mainly for my own use).
  
  Usage: 
  ```
- wget https://gitlab.com/Rishi556/EngineSpeed/-/raw/main/install.sh
+ wget https://raw.githubusercontent.com/Rishi556/EngineSpeed/main/install.sh
  chmod +x install.sh
  ./install.sh
  ```
