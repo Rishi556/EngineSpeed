@@ -7,8 +7,8 @@ witness=0
 accountName=""
 privActiveKey=""
 snapshotBase="https://snap.rishipanthee.com/snapshots/"
-gitURL="https://github.com/primersion/steemsmartcontracts.git"
-gitBranch="hive-engine-restore"
+gitURL="https://git.dbuidl.com/rishi556/hivesmartcontracts"
+gitBranch="hive-engine"
 fullnode=1
 ipv6=1
 while getopts wla:p:4s: flag
@@ -69,7 +69,7 @@ sudo npm i -g pm2
 ## Clone Repo ##
 ################
 git clone $gitURL
-cd steemsmartcontracts
+cd hivesmartcontracts
 git checkout $gitBranch
 
 ########################
