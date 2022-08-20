@@ -55,8 +55,10 @@ sudo npm install -g npm
 ##########################
 wget -qO - https://pgp.mongodb.com/server-5.0.asc | sudo apt-key add -
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+curl -fsSL https://apt.privex.io/add-repo.sh | sudo bash
 sudo apt update -y
 sudo apt install git -y
+sudo apt install pvx-caddy -y
 sudo apt install screen -y
 sudo apt install ufw -y
 sudo apt install dnsutils -y
