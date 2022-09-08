@@ -8,7 +8,7 @@ accountName=""
 privActiveKey=""
 snapshotBase="https://snap.rishipanthee.com/snapshots/"
 gitURL="https://git.dbuidl.com/rishi556/hivesmartcontracts"
-gitBranch="hive-engine"
+gitBranch="main"
 fullnode=1
 ipv6=1
 while getopts wla:p:4s: flag
