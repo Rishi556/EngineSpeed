@@ -44,7 +44,7 @@ sudo apt upgrade -y
 #########################
 ## Install  NodeJS/NPM ##
 #########################
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt install nodejs -y
 sudo apt install npm -y
 hash -r
@@ -168,4 +168,4 @@ node restore_partial.js -d -s "$snapshotBase"
 #################
 ## Start it up ##
 #################
-pm2 start app.js --no-treekill --kill-timeout 10000 --no-autorestart --name engnode
+pm2 start app.js --no-treekill --kill-timeout 10000 --no-autorestart --node-args="--openssl-legacy-provider" --name engwit
