@@ -53,8 +53,8 @@ sudo npm install -g npm
 ##########################
 ## Install Dependencies ##
 ##########################
-wget -qO - https://pgp.mongodb.com/server-5.0.asc | sudo apt-key add -
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
+wget -qO - https://pgp.mongodb.com/server-6.0.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 curl -fsSL https://apt.privex.io/add-repo.sh | sudo bash
 sudo apt update -y
 sudo apt install git -y
@@ -138,8 +138,8 @@ sudo systemctl start mongod
 ## Enable Replica Sets Mongo ##
 ###############################
 sleep 30 ## This sleep is needed because mongo takes a while to start up. 30 seconds is overkill but better safe than sorry.
-mongo --eval "rs.initiate()"
-mongo --eval "db.adminCommand({setParameter:1, internalQueryMaxBlockingSortMemoryUsageBytes:2097152000})" # Sets to 2 GB
+mongosh --eval "rs.initiate()"
+mongosh --eval "db.adminCommand({setParameter:1, internalQueryMaxBlockingSortMemoryUsageBytes:2097152000})" # Sets to 2 GB
 
 ###########################################
 ## Enable 2GB Swap If Less Than 4 GB RAM ##
