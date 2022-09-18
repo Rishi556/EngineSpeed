@@ -115,7 +115,7 @@ then
   ufw allow ssh
   ufw allow 5000
   ufw allow 5001
-  sudo ufw enable --force
+  sudo ufw --force enable
 fi
 ######################
 ## End Witness Only ##
