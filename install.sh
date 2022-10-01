@@ -112,9 +112,9 @@ then
   #######################
   ## Allow Port Access ##
   #######################
-  ufw allow ssh
-  ufw allow 5000
-  ufw allow 5001
+  sudo ufw allow ssh
+  sudo ufw allow 5000
+  sudo ufw allow 5001
   sudo ufw --force enable
 fi
 ######################
