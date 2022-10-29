@@ -10,8 +10,7 @@ snapshotBase="https://snap.rishipanthee.com/snapshots/"
 gitURL="https://git.dbuidl.com/rishi556/hivesmartcontracts"
 gitBranch="main"
 fullnode=1
-ipv6=1
-while getopts wla:p:4s: flag
+while getopts wla:p:s: flag
 do
     case "${flag}" in
         w)
@@ -25,9 +24,6 @@ do
           ;;
         p) 
           privActiveKey=${OPTARG}
-          ;;
-        4) 
-          ipv6=0
           ;;
         s)
           snapshotBase=${OPTARG}
@@ -83,25 +79,12 @@ then
 ## Get IP ##
 ############
   pubIP=""
-  if [ 1 -eq $ipv6 ];
+  pubIP=`(dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6)`
+  if [ -z "$pubIP" ];
   then
-    pubIP=`(dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6)`
-    if [ -z "$pubIP" ];
-    then
-      echo "No IPv6 detected, setting to v4"
-      ipv6=0
-    fi
+    echo "No IPv6 detected, exiting. IPv6 is required to be a witness"
+    exit 1
   fi
-
-  if [ 0 -eq $ipv6 ];
-  then
-    pubIP=`(dig @resolver4.opendns.com myip.opendns.com +short -4)`
-    if [ -z "$pubIP" ];
-    then
-      echo "No IP detected, you'll have to manually configure that"
-    fi
-  fi
-
   ####################
   ##  Write To .env ##
   ####################
