@@ -151,4 +151,4 @@ node restore_partial.js -d -s "$snapshotBase"
 #################
 ## Start it up ##
 #################
-pm2 start app.js --no-treekill --kill-timeout 10000 --no-autorestart --node-args="--openssl-legacy-provider" --name engwit
+pm2 start app.js --no-treekill --kill-timeout 10000 --no-autorestart --name engwit
