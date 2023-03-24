@@ -79,7 +79,7 @@ then
 ## Get IP ##
 ############
   pubIP=""
-  pubIP=`(dig @resolver1.ipv6-sandbox.opendns.com AAAA myip.opendns.com +short -6)`
+  pubIP=`(ip -6 addr | sed -ne 's|^.* inet6 \([^/]*\)/.* scope global.*$|\1|p' | head -1)`
   if [ -z "$pubIP" ];
   then
     echo "No IPv6 detected, exiting. IPv6 is required to be a witness"
