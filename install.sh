@@ -110,6 +110,7 @@ fi
 ############################
 sudo echo 'replication:' >> /etc/mongod.conf
 sudo echo '  replSetName: "rs0"' >> /etc/mongod.conf
+sudo echo 'security.javascriptEnabled: false' >> /etc/mongod.conf
 
 ###################
 ## Restart Mongo ##
