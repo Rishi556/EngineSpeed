@@ -97,7 +97,7 @@ then
   ## Allow Port Access ##
   #######################
   sudo ufw allow ssh
-  sudo ufw allow 5000
+  sudo ufw deny 5000
   sudo ufw allow 5001
   sudo ufw --force enable
 fi
