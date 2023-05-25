@@ -144,7 +144,7 @@ fi
 if [ 0 -eq $fullnode ];
 then
   snapshotBase="${snapshotBase}light"
-  sed -i 's/"lightNode": false/"lightNode": true/g' config.json
+  sed -i 's/"enabled": false/"enabled": true/g' config.json
 fi
 
 npm ci
