@@ -69,6 +69,7 @@ sudo npm i -g pm2
 git clone $gitURL
 cd hivesmartcontracts
 git checkout $gitBranch
+cp config.example.json config.json
 
 ########################
 ## Start Witness Only ##
