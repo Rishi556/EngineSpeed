@@ -125,18 +125,6 @@ sleep 30 ## This sleep is needed because mongo takes a while to start up. 30 sec
 mongosh --eval "rs.initiate()"
 mongosh --eval "db.adminCommand({setParameter:1, internalQueryMaxBlockingSortMemoryUsageBytes:2097152000})" # Sets to 2 GB
 
-###########################################
-## Enable 2GB Swap If Less Than 4 GB RAM ##
-###########################################
-totalm=$(free -m | awk '/^Mem:/{print $2}')
-if [ totalm -lt 4096 ];
-then
-  fallocate -l 2G /swapfile
-  chmod 600 /swapfile
-  mkswap /swapfile
-  swapon /swapfile
-fi
-
 ##################################
 ## Get And Load Latest Snapshot ##
 ##################################
