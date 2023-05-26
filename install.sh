@@ -60,7 +60,6 @@ sudo apt install ufw -y
 sudo apt install dnsutils -y
 sudo apt install mongodb-org -y
 sudo apt install build-essential -y
-sudo apt install ufw -y
 sudo npm i -g pm2
 
 ################
