@@ -6,7 +6,7 @@
 witness=0
 accountName=""
 privActiveKey=""
-snapshotBase="https://snap.rishipanthee.com/snapshots/"
+snapshotBase="https://test.rishipanthee.com/"
 gitURL="https://git.dbuidl.com/rishi556/hivesmartcontracts"
 gitBranch="main"
 fullnode=1
