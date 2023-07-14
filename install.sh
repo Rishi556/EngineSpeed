@@ -50,11 +50,9 @@ sudo npm install -g npm
 ## Install Dependencies ##
 ##########################
 wget -qO - https://pgp.mongodb.com/server-6.0.asc | sudo apt-key add -
-echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
-curl -fsSL https://apt.privex.io/add-repo.sh | sudo bash
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
 sudo apt update -y
 sudo apt install git -y
-sudo apt install pvx-caddy -y
 sudo apt install screen -y
 sudo apt install ufw -y
 sudo apt install dnsutils -y
